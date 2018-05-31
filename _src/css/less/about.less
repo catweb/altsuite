@@ -1,0 +1,75 @@
+@import "../mixins";
+.about {
+  background: url("/img/about/bg.png") no-repeat center;
+  background-size: cover;
+}
+.about__cont {
+  display: flex;
+  padding-top: 80px;
+}
+.about__info {
+  flex: 570px;
+  box-sizing: border-box;
+  padding-right: 5%;
+}
+.about__phone {
+  .size(372,373);
+  background: url("/img/about/phone.png") no-repeat 0 0;
+  position: relative;
+  &:after {
+    content: '';
+    .size(272);
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 22px;
+    background: url("/img/about/example.gif") no-repeat 0 0;
+  }
+}
+.about__headline {
+  .fontBold;
+  color: #ffc35b;
+  font-size: 38px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.about__text {
+  color: #ffffff;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  &-light {
+    font-size: 17px;
+    .fontLight;
+  }
+  &-medium {
+    font-size: 18px;
+    .fontMedium;
+  }
+}
+.about__test {
+  flex: 155px;
+  padding-top: 60px;
+}
+.about__test__pic {
+  .size(52,47);
+  background: url("/img/about/plane.png") no-repeat 0 0;
+  margin: 0 auto;
+}
+.about__test__text {
+  color: #ffffff;
+  .fontBold;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  margin: 25px 0;
+}
+.about__test__btn {
+  display: block;
+  height: 60px;
+  border-radius: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  background: #e88005;
+}
