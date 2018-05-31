@@ -1,0 +1,102 @@
+@import "../mixins";
+.how {
+  padding: 110px 0 140px;
+  background: url("/img/how/bg.jpg") no-repeat center bottom;
+  background-size: cover;
+  .headline {
+    color: #ffc35b;
+  }
+}
+.how__steps {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.how__step {
+  background: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  padding: 35px 50px 45px;
+  margin-bottom: 20px;
+  &:nth-child(1) .how__step__num {color: #049298;}
+  &:nth-child(2) .how__step__num {color: #e88005;}
+  &:nth-child(3) .how__step__num {color: #ffc35b;}
+}
+.how__step__num {
+  flex: 0 0 145px;
+  .fontBold;
+  font-size: 48px;
+  line-height: 1;
+}
+.how__step__cont {
+  flex: auto;
+  padding-top: 10px;
+}
+.how__step__title {
+  .fontBold;
+  color: #546e7a;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.how__step__text {
+  .fontLight;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.how__reg {
+  display: flex;
+  margin: 25px 0 -20px -35px;
+  flex-wrap: wrap;
+}
+.how__reg__item {
+  border-radius: 50px;
+  flex: 190px;
+  margin: 0 0 20px 30px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  background: #e1eceb;
+  color: #000000;
+  &:hover {
+    background: #eeeeee;
+  }
+}
+.how__reg__icon {
+  flex: 0 0 53px;
+  line-height: 0;
+}
+.how__reg__text {
+  flex: auto;
+  box-sizing: border-box;
+  padding-left: 8%;
+}
+.how__test {
+  margin: 110px auto 0;
+  text-align: center;
+  max-width: 720px;
+}
+.how__test__title {
+  .fontBold;
+  color: #ffc35b;
+  font-size: 27px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+.how__test__text {
+  font-size: 23px;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+.how__test__btn {
+  display: block;
+  border-radius: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #ffffff;
+  max-width: 270px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  background: #e88005;
+}

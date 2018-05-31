@@ -7,23 +7,20 @@ block content
     section.main
         .container
             .main__cont
-                .main__title Эффективные инструменты развития сотрудников и корпоративной культуры
+                .headline Эффективные инструменты развития сотрудников и корпоративной культуры
                 .main__form
                     input(type='text' placeholder='E-mail').main__input
                     button(type='submit').main__submit Попробовать бесплатно
-
             .main__people
 
     section.about
         .container
             .about__cont
                 .about__info
-                    .about__headline Что такое AltSuite
+                    .headline Что такое AltSuite
                     .about__text.about__text-light AltSuite-платформа инструментов для повышения продуктивности и развития корпоративной культуры. Анализируйте вовлеченность сотрудников, развивайте рефлексию и сотрудничество, предугадывайте недопонимание.
                     .about__text.about__text-medium При создании инструментов команда AltSuite ориентировалась на лучшие hr-практики и опыт таких предпринимателей как Рэй Далио, Ласло Бок, Энтони Роббинс и других.
-
                 .about__phone
-
                 .about__test
                     .about__test__pic
                     .about__test__text Тестовый опрос в Telegram
@@ -31,7 +28,7 @@ block content
 
     section.product
         .container
-            .product__headline Продукты AltSuite
+            .headline Продукты AltSuite
             .product_slider
                 .product_slider__wrap
                     .product_slider__list
@@ -49,3 +46,40 @@ block content
                 .product_slider__prev
                 .product_slider__next
 
+    section.how
+        .container
+            .headline Как работает AltSuite
+            .how__steps
+                .how__step
+                    .how__step__num 01 —
+                    .how__step__cont
+                        .how__step__title Настройте платформу
+                        .how__step__text Зарегистрируйте компанию и сотрудников на платформе. Выберите сервисы и настройте их для своей компании.
+                        .how__reg
+                            a(href='#').how__reg__item
+                                .how__reg__icon
+                                    .icon_telegram
+                                .how__reg__text Регистрация через Telegram
+                            a(href='#').how__reg__item
+                                .how__reg__icon
+                                    .icon_slack
+                                .how__reg__text Регистрация через Slack
+                            a(href='#').how__reg__item
+                                .how__reg__icon
+                                    .icon_site
+                                .how__reg__text Регистрация на сайте
+                .how__step
+                    .how__step__num 02 —
+                    .how__step__cont
+                        .how__step__title Используйте удобные канал связи
+                        .how__step__text Платформа AltSuite автоматизирует работу инструментов с помощью ботов для Telegram, Slack и почты. В результате сотрудникам не нужно адаптироваться к платформе, они используют привычные каналы общения.
+                .how__step
+                    .how__step__num 03 —
+                    .how__step__cont
+                        .how__step__title Анализируйте результаты
+                        .how__step__text Бот собирает данные и генерирует удобную для анализа статистику. Руководители видят паттерны развития каждого сотрудника и компании в целом.
+
+            .how__test
+                .how__test__title Попробуйте пройти тестовый опрос в Telegram
+                .how__test__text Без регистрации на платформе вы сможете увидеть все этапы работы бота в вымышленной компании.
+                a(href='#').how__test__btn Пройти опрос
