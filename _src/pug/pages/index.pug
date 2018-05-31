@@ -83,3 +83,18 @@ block content
                 .how__test__title Попробуйте пройти тестовый опрос в Telegram
                 .how__test__text Без регистрации на платформе вы сможете увидеть все этапы работы бота в вымышленной компании.
                 a(href='#').how__test__btn Пройти опрос
+
+    section.advantage
+        .container
+            .headline Преимущества использования AltSuite
+            .advantage__list
+                each item in advantage
+                    .advantage__item
+                        .advantage__img
+                            img(src='/img/advantage/'+item.img)
+                        .advantage__title=item.title
+                        .advantage__text=item.text
+
+    section.remote
+        .container
+            .remote__text С AltSuite даже удаленные сотрудники остаются вовлеченными в развитие компании

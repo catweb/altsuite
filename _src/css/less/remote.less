@@ -1,0 +1,28 @@
+@import "../mixins";
+.remote {
+  background: url("/img/remote/bg.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 27px 30px 0 30px;
+    border-color: #ffffff transparent transparent transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -30px;
+  }
+}
+.remote__text {
+  text-align: center;
+  color: #ffffff;
+  .fontBold;
+  font-size: 23px;
+  line-height: 1.5;
+  padding: 110px 0;
+  max-width: 520px;
+  margin: 0 auto;
+}
