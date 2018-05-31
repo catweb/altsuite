@@ -28,8 +28,17 @@ a {
 canvas {
   display: block;
 }
+input,
+button,
+select,
+textarea {
+  font-family: 'Roboto', sans-serif;
+  &:focus {
+    outline: 0 none;
+  }
+}
 .container {
-  width: 1160px;
+  max-width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
   position: relative;
@@ -40,7 +49,7 @@ canvas {
   height: auto !important;
   height: 100%;
   overflow: hidden;
-  min-width: 1000px;
+  min-width: 320px;
   z-index: 10;
 }
 .button {
@@ -49,6 +58,8 @@ canvas {
   height: 36px;
   border: 2px solid #049298;
   padding: 0 20px;
+  border-radius: 36px;
+  .inlineblock();
   &:hover {
     background: #049298;
     color: #ffffff;
@@ -58,6 +69,7 @@ canvas {
     color: #ffffff;
     &:hover {
       background: #e88005;
+      border-color: #e88005;
     }
   }
 }

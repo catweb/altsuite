@@ -1,13 +1,19 @@
 @import "../mixins";
 
 .header {
-
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 14px;
+  z-index: 10;
 }
 .header__cont {
   display: flex;
 }
 .header__logo {
-
+  .size(126,122);
+  display: block;
+  background: url("/img/header/logo.png") no-repeat 0 0;
 }
 .header__nav {
   margin-left: auto;
@@ -20,6 +26,9 @@
   margin-left: 35px;
   &:first-child {
     margin-left: 0;
+  }
+  &:last-child {
+    margin-left: 12px;
   }
 }
 .header__nav__link {
