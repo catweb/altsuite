@@ -28,3 +28,24 @@ block content
                     .about__test__pic
                     .about__test__text Тестовый опрос в Telegram
                     a(href='#').about__test__btn Пройти
+
+    section.product
+        .container
+            .product__headline Продукты AltSuite
+            .product_slider
+                .product_slider__wrap
+                    .product_slider__list
+                        each item in product
+                            .product_slider__item
+                                .product_slider__cont(class=(item.new) ? 'product_slider__cont-new':'')
+                                    .product_slider__title=item.title
+                                    .product_slider__text=item.text
+                                    .product_slider__options
+                                         each option in item.options
+                                             .product_slider__options__item
+                                                 .product_slider__options__icon
+                                                     span(class=option.icon)
+                                                 .product_slider__options__text=option.text
+                .product_slider__prev
+                .product_slider__next
+
