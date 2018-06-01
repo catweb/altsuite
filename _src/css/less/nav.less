@@ -1,0 +1,142 @@
+@import "../mixins";
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 55px;
+  z-index: 99;
+  background-color: #ebeff2;
+  border-bottom: 1px solid #c1c1c1;
+  display: flex;
+  align-items: center;
+}
+.nav__logo {
+  display: block;
+  .size(89,19);
+  background: url("/img/header/logo-small.svg") no-repeat 0 0;
+  background-size: 100% auto;
+  position: relative;
+}
+.nav__burger {
+  .size(48);
+  display: flex;
+  margin: 0 35px 0 4px;
+  position: relative;
+  span {
+    width: 24px;
+    height: 4px;
+    background-color: #333;
+    backface-visibility: hidden;
+    border-radius: 0;
+    position: relative;
+    display: block;
+    margin: auto;
+    transition: all .3s ease;
+    transform: rotate(180deg);
+    &:before,
+    &:after {
+      transform-origin: 1.71429px center;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -8px;
+      transition: all .3s ease;
+      width: 24px;
+      height: 4px;
+      background-color: #333;
+      backface-visibility: hidden;
+      border-radius: 0;
+    }
+    &:after {
+      top: 8px;
+    }
+  }
+  &.active {
+    span {
+      transform: rotate(1turn);
+      &:before,
+      &:after {
+        top: 0;
+        width: 15px;
+      }
+      &:before {
+        transform: rotate(-40deg);
+      }
+      &:after {
+        transform: rotate(40deg);
+      }
+    }
+  }
+}
+.nav__menu {
+  width: 252px;
+  background: #ffffff;
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  transition: transform 200ms ease;
+}
+.nav__cont {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.nav__list {
+  padding: 56px 0;
+  margin: 0 30px;
+  text-align: center;
+  & > li {
+    margin-bottom: 14px;
+    &.active .nav__link {
+      background: #049298;
+      color: #f2f2f2;
+      border-radius: 20px;
+    }
+    .button {
+      width: auto;
+      display: block;
+      padding: 0 5px;
+    }
+  }
+}
+.nav__link {
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+  color: #000000;
+  padding: 5px 0;
+  &:hover {
+    background: #f2f2f2;
+    color: #049298;
+  }
+}
+.nav_opened {
+  .nav__burger {
+    span {
+      transform: rotate(1turn);
+      &:before,
+      &:after {
+        top: 0;
+        width: 15px;
+      }
+      &:before {
+        transform: rotate(-40deg);
+      }
+      &:after {
+        transform: rotate(40deg);
+      }
+    }
+  }
+  .nav__menu {
+    transform: translateX(0);
+  }
+}
