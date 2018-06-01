@@ -160,3 +160,32 @@ block content
 
 
             a(href='#').blog__button Почитать еще →
+
+    section.support
+        .container
+            .support__cont
+                .support__col
+                    form.support_form
+                        .support_form__field
+                            input(type='text' placeholder='Имя').support_form__input
+                        .support_form__field
+                            input(type='text' placeholder='Телефон').support_form__input
+                        .support_form__field
+                            input(type='text' placeholder='E-mail').support_form__input
+                        .support_form__field
+                            textarea(placeholder='Комментарий').support_form__textarea
+
+                        button(type='submit').support_form__button Оставить заявку
+                .support__col
+                    .support__title Поддержка
+                    .support__text support@altsuite.com
+                    ul.support__menu
+                        li <a href="#">Продукт</a>
+                        li <a href="#">Цена</a>
+                        li <a href="#">Отзывы</a>
+                        li <a href="#">Контакты</a>
+                        li <a href="#">Политика конфиденциальности</a>
+
+                .support__col
+                    img(src='/img/support/man.png').support__man
+
