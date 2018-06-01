@@ -128,3 +128,21 @@ block content
                             .pack_pay__text / месяц
                         .pack_card__text
             .pack__remark *Оплата производится за год
+
+    section.stories
+        .container
+            .stories_slider
+                .stories_slider__wrap
+                    .stories_slider__list
+                        each item in stories
+                            .stories_slider__item
+                                .stories_slider__pic
+                                    img(src='/img/stories/'+item.img)
+                                .stories_slider__cont
+                                    .stories_slider__title=item.title
+                                    .stories_slider__status=item.status
+                                    .stories_slider__text=item.text
+                .stories_slider__prev
+                .stories_slider__next
+
+    section
