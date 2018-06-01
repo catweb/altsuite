@@ -12,6 +12,7 @@
   margin: 0 auto;
 }
 .how__step {
+  position: relative;
   background: #ffffff;
   border-radius: 30px;
   display: flex;
@@ -20,12 +21,18 @@
   &:nth-child(1) .how__step__num {color: #049298;}
   &:nth-child(2) .how__step__num {color: #e88005;}
   &:nth-child(3) .how__step__num {color: #ffc35b;}
+  .mediaSm({
+    padding: 10px 20px 24px;
+  });
 }
 .how__step__num {
   flex: 0 0 145px;
   .fontBold;
   font-size: 48px;
   line-height: 1;
+  .mediaSm({
+    display: none;
+  });
 }
 .how__step__cont {
   flex: auto;
@@ -99,4 +106,32 @@
   font-size: 18px;
   text-align: center;
   background: #e88005;
+}
+.how__step__arrow {
+  position: absolute;
+  top: -20px;
+  right: 50px;
+  &:before {
+    content: '';
+    display: block;
+    .size(20,13);
+    margin: 0 auto;
+    background: #049298;
+  }
+  &:after {
+    content: '';
+    display: block;
+    .size(0);
+    border-style: solid;
+    border-width: 30px 24px 0 24px;
+    border-color: #049298 transparent transparent transparent;
+  }
+  &-orange {
+    &:before {
+      background: #e88005;
+    }
+    &:after {
+      border-color: #e88005 transparent transparent transparent;
+    }
+  }
 }
