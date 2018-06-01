@@ -11,11 +11,20 @@
 .about__cont {
   display: flex;
   padding-top: 80px;
+  .mediaLg({
+    padding: 80px 0;
+  });
+  .mediaSm({
+    flex-wrap: wrap;
+  });
 }
 .about__info {
   flex: 570px;
   box-sizing: border-box;
   padding-right: 5%;
+  .mediaSm({
+    padding-right: 0;
+  });
 }
 .about__phone {
   .size(372,373);
@@ -30,6 +39,9 @@
     left: 22px;
     background: url("/img/about/example.gif") no-repeat 0 0;
   }
+  .mediaLg({
+    display: none;
+  });
 }
 .about__text {
   color: #ffffff;
@@ -47,6 +59,9 @@
 .about__test {
   flex: 155px;
   padding-top: 60px;
+  .mediaSm({
+    padding-top: 30px;
+  });
 }
 .about__test__pic {
   .size(52,47);
