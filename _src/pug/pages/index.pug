@@ -145,4 +145,18 @@ block content
                 .stories_slider__prev
                 .stories_slider__next
 
-    section
+    section.blog
+        .container
+            .headline Блог
+            .blog__cont
+                each i in [1,2,3]
+                    a(href='#').blog__item
+                        .blog__item__pic
+                            img(src='/img/blog/1.png')
+                        .blog__item__cont
+                            .blog__item__date 27 марта, 15:00
+                            .blog__item__title В белом плаще с кровавым подбоем, шаркающей кавалерийской походкой
+                            .blog__item__text Ранним утром четырнадцатого числа весеннего месяца нисана в крытую колоннаду между двумя крыльями дворца ирода великого вышел прокуратор Иудеи Понтий Пилат.
+
+
+            a(href='#').blog__button Почитать еще →
