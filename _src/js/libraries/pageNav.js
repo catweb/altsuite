@@ -6,7 +6,7 @@
         //default settings
         var settings = $.extend({
             speed: 300,
-            tglBtn: '.nav__burger',
+            tglBtn: '.nav__burger, .nav__overlay',
             anchor: '.anchor',
             navLink: 'a[data-name]',
             body: 'body',
@@ -34,7 +34,7 @@
             e.preventDefault();
             var top = $Anchors.filter('[name='+ $(this).attr('data-name') +']').offset().top;
             $('html,body').animate({
-                scrollTop: top
+                scrollTop: top+1
             },
             settings.speed
             );

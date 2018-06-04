@@ -15,6 +15,14 @@
     visibility: visible;
   });
 }
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
 .nav__logo {
   display: block;
   .size(89,19);
@@ -142,5 +150,8 @@
   }
   .nav__menu {
     transform: translateX(0);
+  }
+  .nav__overlay {
+    display: block;
   }
 }
