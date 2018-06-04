@@ -19,6 +19,15 @@
 
         // Private methods
         var init = function(){
+            //list height
+            setListHeight();
+            $List.css({
+                WebkitTransition: "height 200ms",
+                MozTransition : "height 200ms",
+                transition: "height 200ms"
+            });
+            $(window).on('resize', setListHeight);
+
             // nav buttons
             $BtnPrev.on('click', showPrev);
             $BtnNext.on('click', showNext);
@@ -37,6 +46,7 @@
             $List.animate({
                 left: 0
             }, settings.speed*step/100, function () {
+                setListHeight();
                 Flag = true;
             });
         };
@@ -51,10 +61,13 @@
             }, settings.speed*step/100, function () {
                 $firstItem.appendTo($List);
                 $List.css({left: 0});
+                setListHeight();
                 Flag = true;
             });
         };
-
+        var setListHeight = function(){
+            $List.height($List.children().first().height());
+        };
         //initialization
         init();
     }
