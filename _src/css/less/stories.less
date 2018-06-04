@@ -39,8 +39,11 @@
   cursor: pointer;
   background: url("/img/stories/prev.png") no-repeat left center;
   opacity: .3;
+  transition: all 200ms ease;
+  filter: grayscale(100%);
   &:hover {
     opacity: 1;
+    filter: grayscale(0);
   }
   .mediaSm({
     width: 22px;
@@ -55,8 +58,11 @@
   cursor: pointer;
   background: url("/img/stories/next.png") no-repeat right center;
   opacity: .5;
+  filter: grayscale(100%);
+  transition: all 200ms ease;
   &:hover {
     opacity: 1;
+    filter: grayscale(0);
   }
   .mediaSm({
     width: 22px;

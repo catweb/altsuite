@@ -25,6 +25,9 @@ ul {
 }
 a {
   text-decoration: none;
+  &:focus {
+    outline: 0 none;
+  }
 }
 canvas {
   display: block;
@@ -81,4 +84,14 @@ textarea {
   font-size: 38px;
   line-height: 1.4;
   margin-bottom: 50px;
+}
+section {
+  position: relative;
+}
+.anchor {
+  position: absolute;
+  top: 0;
+  .mediaMd({
+    top: -56px;
+  });
 }

@@ -115,7 +115,7 @@ gulp.task('imgMin', function(){
             mozjpeg: true,
             gifsicle: true,
             svgo: true,
-            concurrent: 10
+            concurrent: 5
         })))
         .pipe(gulp.dest(build.img))
         .pipe(gulpif(environments.serv, reload({ stream: true })));
@@ -140,14 +140,14 @@ gulp.task('sprite', function () {
 });
 
 gulp.task('js', function(){
-    var lib = gulp.src(src.jsLib)
-        .pipe(gulpif(environments.dev, cached('jsLib')))
-        .pipe(gulpif(environments.dev, remember('jsLib')))
-        .pipe(concat('libraries.js'))
-        .pipe(gulp.dest(build.jsLib))
-        .pipe(gulpif(environments.serv, reload({ stream: true })));
+    // var lib = gulp.src(src.jsLib)
+    //     .pipe(gulpif(environments.dev, cached('jsLib')))
+    //     .pipe(gulpif(environments.dev, remember('jsLib')))
+    //     .pipe(concat('libraries.js'))
+    //     .pipe(gulp.dest(build.jsLib))
+    //     .pipe(gulpif(environments.serv, reload({ stream: true })));
 
-    var mod = gulp.src(src.jsMod)
+    var mod = gulp.src([src.jsLib, src.jsMod])
         .pipe(gulpif(environments.dev, sourcemaps.init()))
         .pipe(gulpif(environments.dev, cached('jsMod')))
         .pipe(gulpif(environments.dev, remember('jsMod')))
@@ -164,7 +164,8 @@ gulp.task('js', function(){
         .pipe(gulp.dest(build.jsMod))
         .pipe(gulpif(environments.serv, reload({ stream: true })));
 
-    return stream(lib, mod);
+    // return stream(lib, mod);
+    return mod;
 });
 
 gulp.task('pug', function() {
@@ -178,17 +179,18 @@ gulp.task('pug', function() {
         .pipe(gulp.dest(build.pugPages))
         .pipe(gulpif(environments.serv, reload({ stream: true })));
 
-    var blocks = gulp.src(src.pugBlocks)
-        .pipe(gulpif(environments.dev, cached('pugBlocks')))
-        .pipe(gulpif(environments.dev, remember('pugBlocks')))
-        .pipe(pug({
-            locals: pugData,
-            pretty: '\t'
-        }))
-        .pipe(gulp.dest(build.pugBlocks))
-        .pipe(gulpif(environments.serv, reload({ stream: true })));
+    // var blocks = gulp.src(src.pugBlocks)
+    //     .pipe(gulpif(environments.dev, cached('pugBlocks')))
+    //     .pipe(gulpif(environments.dev, remember('pugBlocks')))
+    //     .pipe(pug({
+    //         locals: pugData,
+    //         pretty: '\t'
+    //     }))
+    //     .pipe(gulp.dest(build.pugBlocks))
+    //     .pipe(gulpif(environments.serv, reload({ stream: true })));
 
-    return stream(pages, blocks);
+    // return stream(pages, blocks);
+    return pages;
 });
 
 gulp.task('watch', function(){

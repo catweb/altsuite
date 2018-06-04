@@ -8,8 +8,8 @@ block content
         .container
             .main__cont
                 .headline Эффективные инструменты развития сотрудников и корпоративной культуры
-                .main__form
-                    input(type='text' placeholder='E-mail').main__input
+                form.main__form
+                    input(type='text' placeholder='E-mail').main__input.jsRegInput
                     button(type='submit').main__submit Попробовать бесплатно
             .main__people
 
@@ -27,6 +27,7 @@ block content
                     a(href='#').about__test__btn Пройти
 
     section.product
+        a(name="product").anchor
         .container
             .headline Продукты AltSuite
             .product_slider
@@ -47,6 +48,7 @@ block content
                 .product_slider__next
 
     section.how
+        a(name="how").anchor
         .container
             .headline Как работает AltSuite
             .how__steps
@@ -148,6 +150,7 @@ block content
                 .stories_slider__next
 
     section.blog
+        a(name="blog").anchor
         .container
             .headline Блог
             .blog__cont
@@ -164,6 +167,7 @@ block content
             a(href='#').blog__button Почитать еще →
 
     section.support
+        a(name="support").anchor
         .container
             .support__cont
                 .support__col

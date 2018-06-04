@@ -42,7 +42,14 @@
   left: 0;
   width: 40px;
   cursor: pointer;
-  background: url("/img/product/prev.png") no-repeat left center;
+  background: url("/img/stories/prev.png") no-repeat left center;
+  opacity: .3;
+  transition: all 200ms ease;
+  filter: grayscale(100%);
+  &:hover {
+    opacity: 1;
+    filter: grayscale(0);
+  }
   .mediaSm({
     width: 22px;
   });
@@ -54,7 +61,14 @@
   right: 0;
   width: 40px;
   cursor: pointer;
-  background: url("/img/product/next.png") no-repeat right center;
+  background: url("/img/stories/next.png") no-repeat right center;
+  opacity: .3;
+  transition: all 200ms ease;
+  filter: grayscale(100%);
+  &:hover {
+    opacity: 1;
+    filter: grayscale(0);
+  }
   .mediaSm({
     width: 22px;
   });
